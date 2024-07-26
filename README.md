@@ -23,13 +23,26 @@ To run this project, you'll need Python installed along with the following libra
 
 You can install these libraries using pip:
 
-```bash
+
 pip install numpy matplotlib pandas
 
 ## Dataset
-The dataset used in this project is a simulated dataset where each row represents a round, and each column represents an advertisement. The values indicate whether a user clicked on an advertisement (1) or not (0).
 
-##Code Explanation
+The dataset used in this project is a simulated dataset where each row represents a round, and each column represents an advertisement. The values indicate whether a user clicked on an advertisement (1) or not (0).
+# Upper Confidence Bound (UCB) Algorithm
+
+The UCB algorithm selects the ad that maximizes the upper confidence bound. The UCB formula is given by:
+
+\[ \text{UCB} = \hat{x_i} + \sqrt{\frac{2 \ln n}{n_i}} \]
+
+where:
+
+- \( \hat{x_i} \) is the average reward of ad \( i \) up to round \( n \).
+- \( n \) is the number of rounds.
+- \( n_i \) is the number of times ad \( i \) has been selected up to round \( n \).
+
+
+## Code Explanation
 Here's a step-by-step explanation of the code:
 
 ### 1. Importing Libraries
