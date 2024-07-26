@@ -29,65 +29,6 @@ pip install numpy matplotlib pandas
 ## Dataset
 The dataset used in this project is a simulated dataset where each row represents a round, and each column represents an advertisement. The values indicate whether a user clicked on an advertisement (1) or not (0).
 
-Algorithm Explanation
-The UCB algorithm selects the ad that maximizes the upper confidence bound. The UCB formula is given by:
-
-UCB
-=
-𝑥
-^
-𝑖
-+
-2
-ln
-⁡
-𝑛
-𝑛
-𝑖
-UCB= 
-x
-^
-  
-i
-​
- + 
-n 
-i
-​
- 
-2lnn
-​
- 
-​
- 
-
-where:
-
-𝑥
-^
-𝑖
-x
-^
-  
-i
-​
-  is the average reward of ad 
-𝑖
-i up to round 
-𝑛
-n.
-𝑛
-n is the number of rounds.
-𝑛
-𝑖
-n 
-i
-​
-  is the number of times ad 
-𝑖
-i has been selected up to round 
-𝑛
-n.
 ##Code Explanation
 Here's a step-by-step explanation of the code:
 
