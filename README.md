@@ -7,7 +7,6 @@ This project demonstrates the implementation of the Upper Confidence Bound (UCB)
 
 1. [Installation](#installation)
 2. [Dataset](#dataset)
-3. [Algorithm Explanation](#algorithm-explanation)
 4. [Code Explanation](#code-explanation)
 5. [Results](#results)
 6. [Conclusion](#conclusion)
@@ -29,17 +28,6 @@ pip install numpy matplotlib pandas
 ## Dataset
 
 The dataset used in this project is a simulated dataset where each row represents a round, and each column represents an advertisement. The values indicate whether a user clicked on an advertisement (1) or not (0).
-# Upper Confidence Bound (UCB) Algorithm
-
-The UCB algorithm selects the ad that maximizes the upper confidence bound. The UCB formula is given by:
-
-\[ \text{UCB} = \hat{x_i} + \sqrt{\frac{2 \ln n}{n_i}} \]
-
-where:
-
-- \( \hat{x_i} \) is the average reward of ad \( i \) up to round \( n \).
-- \( n \) is the number of rounds.
-- \( n_i \) is the number of times ad \( i \) has been selected up to round \( n \).
 
 
 ## Code Explanation
@@ -51,23 +39,30 @@ We start by importing the necessary libraries, including NumPy for numerical ope
 ### 2. Loading the Dataset
 We load the dataset using Pandas. The dataset consists of rows representing rounds and columns representing different advertisements. Each cell in the dataset indicates whether a user clicked on the corresponding advertisement (1) or not (0).
 
-### 3. Implementing UCB
+# 3. Code Explanation
+
+## 1. Importing Libraries
+We start by importing the necessary libraries, including NumPy for numerical operations, Matplotlib for plotting, and Pandas for handling the dataset.
+
+## 2. Loading the Dataset
+We load the dataset using Pandas. The dataset consists of rows representing rounds and columns representing different advertisements. Each cell in the dataset indicates whether a user clicked on the corresponding advertisement (1) or not (0).
+
+## 3. Implementing UCB
 We initialize the parameters and iterate over 10,000 rounds to apply the UCB algorithm.
 
-N: Total number of rounds (10,000).
-d: Number of ads (10).
-ads_selected: Keeps track of the ads selected in each round.
-numbers_of_selections: Stores the number of times each ad has been selected.
-sums_of_rewards: Stores the total reward of each ad.
-total_reward: Stores the total accumulated reward.
-For each round:
+- **N**: Total number of rounds (10,000).
+- **d**: Number of ads (10).
+- **ads_selected**: Keeps track of the ads selected in each round.
+- **numbers_of_selections**: Stores the number of times each ad has been selected.
+- **sums_of_rewards**: Stores the total reward of each ad.
+- **total_reward**: Stores the total accumulated reward.
 
-We calculate the UCB for each ad.
-We select the ad with the highest UCB.
-We update the number of selections and the sum of rewards for the selected ad.
-We accumulate the total reward.
-4. Visualizing the Results
-We plot a histogram to visualize the number of times each ad was selected. This helps in understanding the distribution of ad selections, indicating which ads were explored and exploited more frequently by the UCB algorithm.
+For each round:
+1. We calculate the UCB for each ad.
+2. We select the ad with the highest UCB.
+3. We update the number of selections and the sum of rewards for the selected ad.
+4. We accumulate the total reward.
+
 
 ### Results
 The results show the distribution of ad selections. The histogram indicates the number of times each ad was selected, providing insights into how the UCB algorithm balances exploration and exploitation.
