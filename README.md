@@ -10,7 +10,7 @@ This project demonstrates the implementation of the Upper Confidence Bound (UCB)
 4. [Code Explanation](#code-explanation)
 5. [Results](#results)
 6. [Conclusion](#conclusion)
-7. [References](#references)
+
 
 ## Installation
 
